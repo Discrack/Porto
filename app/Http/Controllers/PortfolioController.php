@@ -22,7 +22,7 @@ class PortfolioController extends Controller
                 ['name' => 'Kibana', 'slug' => 'kibana'],
                 ['name' => 'Grafana', 'slug' => 'grafana'],
                 ['name' => 'Splunk', 'slug' => 'splunk'],
-                ['name' => 'AWS IAM', 'slug' => 'amazonaws'],
+                ['name' => 'AWS IAM', 'slug' => 'amazon'],
                 ['name' => 'Docker', 'slug' => 'docker'],
             ],
             'Frontend' => [
@@ -35,6 +35,8 @@ class PortfolioController extends Controller
                 ['name' => 'Postman', 'slug' => 'postman'],
                 ['name' => 'FL Studio', 'slug' => 'flstudio'],
             ],
+            ['name' => 'AWS IAM', 'slug' => 'amazonaws', 'local_icon' => 'icons/aws-iam.svg'],
+            ['name' => 'FL Studio', 'slug' => 'flstudio', 'local_icon' => 'icons/fl-studio.svg'],
         ];
 
         $projects = [

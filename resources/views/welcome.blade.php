@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aigal Kurniawan - Portfolio</title>
+    <title>Porto</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -50,7 +50,7 @@
                                     Project</span>
                                 <span class="bg-discord-darkest px-4 py-2 rounded-lg text-sm font-medium">Laravel
                                     Dev</span>
-                                <span class="bg-discord-darkest px-4 py-2 rounded-lg text-sm font-medium">Audio
+                                <span class="bg-discord-darkest px-4 py-2 rounded-lg text-sm font-medium">EDM
                                     Producer</span>
                             </div>
                         </div>
@@ -60,6 +60,16 @@
         </section>
 
         <!-- Tech Stack Marquee -->
+        @foreach($allTechIcons as $tech)
+            <div class="flex items-center gap-3 mx-6 flex-shrink-0">
+                @if(isset($tech['local_icon']))
+                    <img src="{{ asset($tech['local_icon']) }}" alt="{{ $tech['name'] }}" class="w-8 h-8">
+                @else
+                    <img src="https://cdn.simpleicons.org/{{ $tech['slug'] }}/dcddde" alt="{{ $tech['name'] }}" class="w-8 h-8">
+                @endif
+                <span class="text-discord-text font-medium whitespace-nowrap">{{ $tech['name'] }}</span>
+            </div>
+        @endforeach
         <section class="py-12 overflow-hidden bg-discord-darkest border-y border-discord-darker">
             <div class="mb-4 text-center">
                 <h2 class="text-2xl font-bold text-white">Tech Arsenal</h2>
@@ -98,9 +108,9 @@
                                 <span class="text-4xl">{{ $project['icon'] }}</span>
                                 <span
                                     class="px-3 py-1 rounded-full text-xs font-semibold
-                                            {{ $project['type'] === 'code' ? 'bg-blue-500/20 text-blue-400' : '' }}
-                                            {{ $project['type'] === 'security' ? 'bg-red-500/20 text-red-400' : '' }}
-                                            {{ $project['type'] === 'creative' ? 'bg-purple-500/20 text-purple-400' : '' }}">
+                                                                    {{ $project['type'] === 'code' ? 'bg-blue-500/20 text-blue-400' : '' }}
+                                                                    {{ $project['type'] === 'security' ? 'bg-red-500/20 text-red-400' : '' }}
+                                                                    {{ $project['type'] === 'creative' ? 'bg-purple-500/20 text-purple-400' : '' }}">
                                     {{ ucfirst($project['type']) }}
                                 </span>
                             </div>
@@ -267,13 +277,18 @@
         <footer class="py-12 px-4 border-t border-discord-darker">
             <div class="max-w-6xl mx-auto text-center">
                 <div class="flex justify-center gap-6 mb-6">
-                    <a href="#" class="text-discord-muted hover:text-discord-blurple transition">
+                    <a href="https://github.com/Discrack" target="_blank"
+                        class="text-discord-muted hover:text-discord-blurple transition">
                         <img src="https://cdn.simpleicons.org/github/dcddde" alt="GitHub" class="w-6 h-6">
                     </a>
-                    <a href="#" class="text-discord-muted hover:text-discord-blurple transition">
-                        <img src="https://cdn.simpleicons.org/linkedin/dcddde" alt="LinkedIn" class="w-6 h-6">
+
+                    <a href="https://www.linkedin.com/in/aigaal/" target="_blank"
+                        class="text-discord-muted hover:text-discord-blurple transition">
+                        <img src="{{ asset('icons/linkedin.svg') }}" alt="LinkedIn" class="w-6 h-6 filter invert">
                     </a>
-                    <a href="#" class="text-discord-muted hover:text-discord-blurple transition">
+
+                    <a href="mailto:aigalkurniawan@gmail.com"
+                        class="text-discord-muted hover:text-discord-blurple transition">
                         <img src="https://cdn.simpleicons.org/gmail/dcddde" alt="Email" class="w-6 h-6">
                     </a>
                 </div>
