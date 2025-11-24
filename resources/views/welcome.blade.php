@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porto</title>
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/ios_filled/1200/discord-logo.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -32,25 +33,27 @@
 
                         <!-- Profile Info -->
                         <div class="flex-1">
-                            <h1 class="text-4xl font-bold mb-2 text-white">Aigal Kurniawan</h1>
-                            <p class="text-xl text-discord-blurple font-semibold mb-4">IT Student & L1 DPP Engineer</p>
+                            <h1 class="text-4xl font-bold mb-2 text-white">Aigal Kurniawan (Discrack)</h1>
+                            <p class="text-xl text-discord-blurple font-semibold mb-4">IT Student | ITSecOps
+                            </p>
                             <div class="bg-discord-darkest rounded-lg p-4 mb-4">
-                                <div class="flex items-center gap-2 mb-2">
-                                    <div class="w-3 h-3 bg-discord-blurple rounded-full animate-pulse-slow"></div>
-                                    <span class="text-sm text-discord-muted font-medium">Current Status</span>
-                                </div>
-                                <p class="text-discord-text">Configuring ELK Stack... 🔧</p>
+                                <!-- <div class="flex items-center gap-2 mb-2"> -->
+                                <!-- <div class="w-3 h-3 bg-discord-blurple rounded-full animate-pulse-slow"></div> -->
+                                <span class="text-sm text-discord-muted font-medium">Current Status</span>
+                                <!-- </div> -->
+                                <p class="text-discord-text">Monitoring Grafana... 📊</p>
                             </div>
                             <p class="text-discord-text leading-relaxed mb-6">
-                                Merging Backend Engineering with Enterprise Security (ELK/Splunk) and Audio Creativity.
+                                Merging Backend Engineering with Enterprise Security (Grafana/Splunk) and Audio
+                                Creativity.
                                 Building secure, scalable systems while exploring the sonic landscape.
                             </p>
                             <div class="flex flex-wrap gap-3">
                                 <span class="bg-discord-darkest px-4 py-2 rounded-lg text-sm font-medium">Security
-                                    Project</span>
+                                    Engineer</span>
                                 <span class="bg-discord-darkest px-4 py-2 rounded-lg text-sm font-medium">Laravel
                                     Dev</span>
-                                <span class="bg-discord-darkest px-4 py-2 rounded-lg text-sm font-medium">EDM
+                                <span class="bg-discord-darkest px-4 py-2 rounded-lg text-sm font-medium">Music
                                     Producer</span>
                             </div>
                         </div>
@@ -60,17 +63,8 @@
         </section>
 
         <!-- Tech Stack Marquee -->
-        @foreach($allTechIcons as $tech)
-            <div class="flex items-center gap-3 mx-6 flex-shrink-0">
-                @if(isset($tech['local_icon']))
-                    <img src="{{ asset($tech['local_icon']) }}" alt="{{ $tech['name'] }}" class="w-8 h-8">
-                @else
-                    <img src="https://cdn.simpleicons.org/{{ $tech['slug'] }}/dcddde" alt="{{ $tech['name'] }}" class="w-8 h-8">
-                @endif
-                <span class="text-discord-text font-medium whitespace-nowrap">{{ $tech['name'] }}</span>
-            </div>
-        @endforeach
-        <section class="py-12 overflow-hidden bg-discord-darkest border-y border-discord-darker">
+
+        <!-- <section class="py-12 overflow-hidden bg-discord-darkest border-y border-discord-darker">
             <div class="mb-4 text-center">
                 <h2 class="text-2xl font-bold text-white">Tech Arsenal</h2>
                 <p class="text-discord-muted text-sm">Tools & Technologies I Work With</p>
@@ -93,7 +87,7 @@
                     @endforeach
                 </div>
             </div>
-        </section>
+        </section> -->
 
         <!-- Bento Grid - Projects & Highlights -->
         <section class="py-20 px-4">
@@ -108,9 +102,9 @@
                                 <span class="text-4xl">{{ $project['icon'] }}</span>
                                 <span
                                     class="px-3 py-1 rounded-full text-xs font-semibold
-                                                                    {{ $project['type'] === 'code' ? 'bg-blue-500/20 text-blue-400' : '' }}
-                                                                    {{ $project['type'] === 'security' ? 'bg-red-500/20 text-red-400' : '' }}
-                                                                    {{ $project['type'] === 'creative' ? 'bg-purple-500/20 text-purple-400' : '' }}">
+                                                                                                                                                                                                                                                                                                    {{ $project['type'] === 'code' ? 'bg-blue-500/20 text-blue-400' : '' }}
+                                                                                                                                                                                                                                                                                                    {{ $project['type'] === 'security' ? 'bg-red-500/20 text-red-400' : '' }}
+                                                                                                                                                                                                                                                                                                    {{ $project['type'] === 'creative' ? 'bg-purple-500/20 text-purple-400' : '' }}">
                                     {{ ucfirst($project['type']) }}
                                 </span>
                             </div>
@@ -184,8 +178,8 @@
                                 🎵
                             </div>
                             <div>
-                                <h3 class="text-xl font-bold text-white">Midnight Frequency</h3>
-                                <p class="text-discord-muted text-sm">Latest Production</p>
+                                <h3 class="text-xl font-bold text-white">Symphony Beneth The Star</h3>
+                                <p class="text-discord-muted text-sm">KAGE & DSCRACK</p>
                             </div>
                         </div>
 
@@ -193,7 +187,7 @@
                             <div class="bg-discord-darkest h-2 rounded-full overflow-hidden cursor-pointer"
                                 @click="progress = ($event.offsetX / $event.currentTarget.offsetWidth) * 100">
                                 <div class="bg-discord-blurple h-full transition-all duration-300"
-                                    :style="`width: ${progress}%`"></div>
+                                    :style="`width: ${progress}%`">a</div>
                             </div>
                             <div class="flex justify-between mt-2 text-xs text-discord-muted">
                                 <span x-text="currentTime"></span>
@@ -233,11 +227,11 @@
                         <div class="mt-6 pt-6 border-t border-discord-darkest">
                             <div class="flex items-center justify-between text-sm">
                                 <span class="text-discord-muted">Genre</span>
-                                <span class="text-discord-text">Ambient / Electronic</span>
+                                <span class="text-discord-text">Electronic</span>
                             </div>
                             <div class="flex items-center justify-between text-sm mt-2">
                                 <span class="text-discord-muted">BPM</span>
-                                <span class="text-discord-text">120</span>
+                                <span class="text-discord-text">150</span>
                             </div>
                         </div>
                     </div>
@@ -248,7 +242,7 @@
         <!-- Tech Stack Categories -->
         <section class="py-20 px-4 bg-discord-darkest">
             <div class="max-w-6xl mx-auto">
-                <h2 class="text-3xl font-bold text-white mb-12 text-center">Technical Expertise</h2>
+                <h2 class="text-3xl font-bold text-white mb-12 text-center">Tech Stack</h2>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     @foreach($techStack as $category => $techs)
@@ -277,23 +271,53 @@
         <footer class="py-12 px-4 border-t border-discord-darker">
             <div class="max-w-6xl mx-auto text-center">
                 <div class="flex justify-center gap-6 mb-6">
+                    <a href="https://tracker.gg/valorant/profile/riot/nimhpk%231111/overview?platform=pc&playlist=competitive&season=4c4b8cff-43eb-13d3-8f14-96b783c90cd2"
+                        target="_blank" class="text-discord-muted hover:text-discord-blurple transition">
+                        <img src="https://cdn.simpleicons.org/valorant/dcddde" alt="Valorant" class="w-6 h-6">
+                    </a>
+                    <a href="https://instagram.com/aigaal" target="_blank"
+                        class="text-discord-muted hover:text-discord-blurple transition">
+                        <img src="https://cdn.simpleicons.org/instagram/dcddde" alt="Instagram" class="w-6 h-6">
+                    </a>
+                    <a href="https://facebook.com/Aigaal/" target="_blank"
+                        class="text-discord-muted hover:text-discord-blurple transition">
+                        <img src="https://cdn.simpleicons.org/facebook/dcddde" alt="Facebook" class="w-6 h-6">
+                    </a>
+                    <a href="https://x.com/x_dscrack/" target="_blank"
+                        class="text-discord-muted hover:text-discord-blurple transition">
+                        <img src="https://cdn.simpleicons.org/x/dcddde" alt="X" class="w-6 h-6">
+                    </a>
+                    <a href="https://www.youtube.com/@discrack" target="_blank"
+                        class="text-discord-muted hover:text-discord-blurple transition">
+                        <img src="https://cdn.simpleicons.org/youtube/dcddde" alt="YouTube" class="w-6 h-6">
+                    </a>
+                    <a href="https://discord.gg/wmKmcyWu" target="_blank"
+                        class="text-discord-muted hover:text-discord-blurple transition">
+                        <img src="https://cdn.simpleicons.org/discord/dcddde" alt="Discord" class="w-6 h-6">
+                    </a>
+                    <a href="https://soundcloud.com/dscrack/" target="_blank"
+                        class="text-discord-muted hover:text-discord-blurple transition">
+                        <img src="https://cdn.simpleicons.org/soundcloud/dcddde" alt="Soundcloud" class="w-6 h-6">
+                    </a>
                     <a href="https://github.com/Discrack" target="_blank"
                         class="text-discord-muted hover:text-discord-blurple transition">
                         <img src="https://cdn.simpleicons.org/github/dcddde" alt="GitHub" class="w-6 h-6">
                     </a>
-
                     <a href="https://www.linkedin.com/in/aigaal/" target="_blank"
                         class="text-discord-muted hover:text-discord-blurple transition">
-                        <img src="{{ asset('icons/linkedin.svg') }}" alt="LinkedIn" class="w-6 h-6 filter invert">
+                        <img src="https://cdn.simpleicons.org/logmein/dcddde" alt="LinkedIn" class="w-6 h-6">
                     </a>
-
+                    <a href="https://wa.me/6282124424268" target="_blank"
+                        class="text-discord-muted hover:text-discord-blurple transition">
+                        <img src="https://cdn.simpleicons.org/whatsapp/dcddde" alt="WhatsApp" class="w-6 h-6">
+                    </a>
                     <a href="mailto:aigalkurniawan@gmail.com"
                         class="text-discord-muted hover:text-discord-blurple transition">
                         <img src="https://cdn.simpleicons.org/gmail/dcddde" alt="Email" class="w-6 h-6">
                     </a>
                 </div>
-                <p class="text-discord-muted text-sm">© 2024 Aigal Kurniawan. Built with Laravel & Tailwind CSS</p>
-                <p class="text-discord-muted text-xs mt-2">Designed with Discord Aesthetic 💜</p>
+                <p class="text-discord-muted text-sm">© 2025 Aigal K. @discrack</p>
+                <p class="text-discord-muted text-xs mt-2">Inspired by Discord</p>
             </div>
         </footer>
     </div>

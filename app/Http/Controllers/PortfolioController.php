@@ -13,64 +13,82 @@ class PortfolioController extends Controller
                 ['name' => 'Laravel', 'slug' => 'laravel'],
                 ['name' => 'CodeIgniter', 'slug' => 'codeigniter'],
                 ['name' => 'PHP', 'slug' => 'php'],
+                ['name' => 'Python', 'slug' => 'python'],
+                ['name' => 'Node.js', 'slug' => 'nodedotjs'],
+                // ['name' => 'Flutter', 'slug' => 'flutter'],
+                // ['name' => 'Dart', 'slug' => 'dart'],
                 ['name' => 'MySQL', 'slug' => 'mysql'],
+                ['name' => 'postgreSQL', 'slug' => 'postgresql'],
+
             ],
             'Security & Ops' => [
-                ['name' => 'Linux', 'slug' => 'linux'],
-                ['name' => 'Ubuntu', 'slug' => 'ubuntu'],
-                ['name' => 'Elasticsearch', 'slug' => 'elasticsearch'],
-                ['name' => 'Kibana', 'slug' => 'kibana'],
                 ['name' => 'Grafana', 'slug' => 'grafana'],
                 ['name' => 'Splunk', 'slug' => 'splunk'],
-                ['name' => 'AWS IAM', 'slug' => 'amazon'],
+                ['name' => 'Linux', 'slug' => 'linux'],
+                ['name' => 'Ubuntu', 'slug' => 'ubuntu'],
+                // ['name' => 'Debian', 'slug' => 'debian'],
+                ['name' => 'ElasticSearch', 'slug' => 'elasticsearch'],
+                ['name' => 'Kibana', 'slug' => 'kibana'],
                 ['name' => 'Docker', 'slug' => 'docker'],
+                // ['name' => 'Delinea', 'slug' => 'openmediavault'],
+                // ['name' => 'NGINX', 'slug' => 'nginx'],
+                // ['name' => 'Kubernetes', 'slug' => 'kubernetes'],
             ],
             'Frontend' => [
-                ['name' => 'Tailwind CSS', 'slug' => 'tailwindcss'],
+                ['name' => 'HTML', 'slug' => 'html5'],
+                ['name' => 'CSS', 'slug' => 'css'],
+                ['name' => 'Javascript', 'slug' => 'javascript'],
                 ['name' => 'Bootstrap', 'slug' => 'bootstrap'],
+                ['name' => 'Tailwind', 'slug' => 'tailwindcss'],
+                ['name' => 'Figma', 'slug' => 'figma'],
+                ['name' => 'UML', 'slug' => 'diagramsdotnet'],
             ],
             'Tools & Creative' => [
-                ['name' => 'Git', 'slug' => 'git'],
+                ['name' => 'Visual Studio Code', 'slug' => 'tldraw'],
+                // ['name' => 'Android Studio', 'slug' => 'android'],
                 ['name' => 'GitHub', 'slug' => 'github'],
+                ['name' => 'Git', 'slug' => 'git'],
                 ['name' => 'Postman', 'slug' => 'postman'],
-                ['name' => 'FL Studio', 'slug' => 'flstudio'],
+                ['name' => 'VMWare', 'slug' => 'vmware'],
+                // ['name' => 'Packet Tracer', 'slug' => 'cisco'],
+                ['name' => 'FL Studio', 'slug' => 'sketch'],
+                ['name' => 'iZotope', 'slug' => 'photon'],
             ],
-            ['name' => 'AWS IAM', 'slug' => 'amazonaws', 'local_icon' => 'icons/aws-iam.svg'],
-            ['name' => 'FL Studio', 'slug' => 'flstudio', 'local_icon' => 'icons/fl-studio.svg'],
         ];
 
+        // Data Project
         $projects = [
             [
-                'title' => 'Secure HRIS Core',
+                'title' => 'DigialZone Marketplace',
                 'type' => 'code',
-                'description' => 'Enterprise-grade HRIS system built with Laravel featuring advanced RBAC, multi-tenant architecture, and comprehensive audit logging.',
-                'tech' => ['Laravel', 'MySQL', 'Redis', 'JWT'],
+                'description' => 'CapStone Project Enterprise-grade Marketplace system built with Laravel featuring advanced RBAC, multi-tenant architecture, and comprehensive audit logging.',
+                'tech' => ['Laravel', 'MySQL', 'Node.js', 'Tailwind'],
                 'highlights' => [
                     'Role-Based Access Control (RBAC)',
                     'Multi-tenant Support',
                     'Audit Trail System',
                     'RESTful API Architecture'
                 ],
-                'icon' => '🔐'
+                'icon' => '🛒'
             ],
             [
-                'title' => 'Security Log Sentinel',
+                'title' => 'T-Sel MO Security L1',
                 'type' => 'security',
-                'description' => 'Real-time security monitoring platform aggregating logs from multiple sources with intelligent threat detection and automated alerting.',
-                'tech' => ['ELK Stack', 'Splunk', 'Grafana', 'Python'],
+                'description' => 'Real-time security monitoring platform aggregating logs from multiple sources with intelligent data protection and automated alerting.',
+                'tech' => ['Grafana', 'Splunk', 'Delinea', 'Linux', 'Python'],
                 'highlights' => [
                     'Real-time Log Aggregation',
                     'Threat Pattern Detection',
                     'Custom Dashboards',
-                    'Automated Incident Response'
+                    'Automated Incident & Alert Response'
                 ],
                 'icon' => '🛡️'
             ],
             [
-                'title' => 'Midnight Frequency',
+                'title' => 'KAGE Music',
                 'type' => 'creative',
-                'description' => 'Audio production project exploring the intersection of ambient soundscapes and electronic music, crafted entirely in FL Studio.',
-                'tech' => ['FL Studio', 'Mixing', 'Mastering', 'Sound Design'],
+                'description' => 'Music production project exploring the genre of electronic music, crafted entirely in DAW FL Studio .',
+                'tech' => ['FL Studio', 'Mixing', 'Mastering', 'Sound Design', 'Beat Making'],
                 'highlights' => [
                     'Original Compositions',
                     'Sound Engineering',
@@ -81,6 +99,7 @@ class PortfolioController extends Controller
             ],
         ];
 
+        // Ratakan array untuk Marquee (animasi jalan)
         $allTechIcons = collect($techStack)->flatten(1)->all();
 
         return view('welcome', compact('techStack', 'projects', 'allTechIcons'));
