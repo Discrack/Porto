@@ -96,10 +96,11 @@
                             class="bg-discord-darker rounded-xl p-6 shadow-xl border border-discord-darkest hover:border-discord-blurple transition-all duration-300 transform hover:-translate-y-1">
                             <div class="flex items-start justify-between mb-4">
                                 <span class="text-4xl">{{ $project['icon'] }}</span>
-                                <span class="px-3 py-1 rounded-full text-xs font-semibold
-                                        {{ $project['type'] === 'code' ? 'bg-blue-500/20 text-blue-400' : '' }}
-                                        {{ $project['type'] === 'security' ? 'bg-red-500/20 text-red-400' : '' }}
-                                        {{ $project['type'] === 'creative' ? 'bg-purple-500/20 text-purple-400' : '' }}">
+                                <span
+                                    class="px-3 py-1 rounded-full text-xs font-semibold
+                                            {{ $project['type'] === 'code' ? 'bg-blue-500/20 text-blue-400' : '' }}
+                                            {{ $project['type'] === 'security' ? 'bg-red-500/20 text-red-400' : '' }}
+                                            {{ $project['type'] === 'creative' ? 'bg-purple-500/20 text-purple-400' : '' }}">
                                     {{ ucfirst($project['type']) }}
                                 </span>
                             </div>
